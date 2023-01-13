@@ -125,8 +125,6 @@ final class OAuth2Authorization implements MiddlewareInterface, LoggerAwareInter
      */
     protected function bootFrontendController()
     {
-        // disable page errors
-        $GLOBALS['TYPO3_CONF_VARS']['FE']['pageUnavailable_handling'] = false;
         $GLOBALS['TSFE']->fetch_the_id();
         $GLOBALS['TSFE']->getConfigArray();
         $GLOBALS['TSFE']->settingLanguage();

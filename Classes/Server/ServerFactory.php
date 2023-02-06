@@ -61,6 +61,8 @@ final class ServerFactory
         $grant->setRefreshTokenTTL($this->configuration->getRefreshTokenLifetime());
         // Enable the authentication code grant on the server
         $server->enableGrantType($grant, $this->configuration->getAccessTokenLifetime());
+        // Enable client credentials grant type on the server
+        $server->enableGrantType(new ClientCredentialsGrant);
 
         return $server;
     }

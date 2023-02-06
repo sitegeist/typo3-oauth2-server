@@ -60,10 +60,10 @@ final class OAuth2Authorization implements MiddlewareInterface, LoggerAwareInter
         $factory = new ServerFactory();
         $server = $factory->buildAuthorizationServer();
 
-        $userSession = new UserSession();
+        $userSession = new UserSession($request->getAttribute('frontend.user'));
         $authorizationRequest = $userSession->getData('oauth2.authorizationRequest');
 
-        $this->bootFrontendController();
+        // $this->bootFrontendController();
 
         if (!$authorizationRequest) {
             try {

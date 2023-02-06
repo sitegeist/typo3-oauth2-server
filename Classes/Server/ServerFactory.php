@@ -12,6 +12,7 @@ use FGTCLB\OAuth2Server\Domain\Repository\ScopeRepository;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\AuthorizationValidators\BearerTokenValidator;
 use League\OAuth2\Server\Grant\AuthCodeGrant;
+use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 use League\OAuth2\Server\ResourceServer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
